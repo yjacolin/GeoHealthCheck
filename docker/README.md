@@ -2,8 +2,21 @@
 
 ## Build
 
-docker build -t yjacolin/geohealthcheck .
+```
+$ cd GeoHealthCheck
+$ docker build -t yjacolin/geohealthcheck .
+```
 
-## Run
+## Composition
 
-docker run -d --name GeoHealtCheck -p 8083:80 -v ghc_db:/GeoHealthCheck/DB yjacolin/geohealthcheck 
+In the same directory as this Readme file:
+```
+$ docker-compose up
+```
+
+This composition run a GeoHealthCheck application and the cron job needed. 
+
+## Setup
+
+You can change the docker-compose.yml file to adapt the cron frequency and some
+environmental variable.
